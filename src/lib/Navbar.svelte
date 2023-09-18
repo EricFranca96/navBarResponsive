@@ -62,6 +62,7 @@
         color: #fff;
         margin-left: 50px;
         text-transform: uppercase;
+        font-size: 15px;
     }
 
     .search-box{
@@ -79,7 +80,8 @@
         color: gray;
         font-size: 16px;
         text-align: center;
-        
+        padding-left: 5px;
+        padding-right: 40px;
     }
 
     .search-box button{
@@ -122,6 +124,40 @@
         font-size: 2.5rem;
         display: none;
     }
-    
 
+    @media(max-width:100px){
+        .search-box button{
+            position: absolute;
+        }
+        header ul {
+            position: fixed;
+            top: 100px;
+            right: -100%;
+            background: rgba(0,0,0,0.5);
+            height: calc(100vh - 100px);
+            width: 50%;
+            flex-direction: column;
+            align-items: center;
+            transition: right 0.5s linear;
+        }
+
+        header .menu{
+            display: block;
+            width: 100px;
+            text-align: center;
+        }
+
+        #chk1:checked ~ ul{
+            right: 0;
+        }
+    }
+    @media(max-width:600px){
+        header .logo {
+            font-size: 10px;
+            margin-left: 8px;
+        }
+        header ul{
+            width: 100%;
+        }
+    }
 </style>
